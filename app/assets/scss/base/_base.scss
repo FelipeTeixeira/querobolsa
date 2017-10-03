@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include box-sizing();
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 320px;
+    background-color: #F7F7F7;
+    font-family: $font;
+    color: rgba(0,0,0,0.87);
+}
+
+main {
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input {
+    font-size: 18px;
+    font-family: $font;
+    border: none;
+
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+}
