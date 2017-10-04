@@ -6,10 +6,17 @@
 
 // LAYOUT
 @import "layout/_general";
+@import "layout/_header";
 
 // MODULES
 // @import "module/_product";
 
 // STATES
 @import "state/_state";
+
+$color-orange: #de9e1f;
+
+.u-hide {
+    display: none;
+}
 

@@ -8,10 +8,122 @@
     <title>
         Quero Bolsa
     </title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+        <symbol id="icon-menu" viewBox="0 0 32 32">
+        <title>menu</title>
+        <path d="M0 2.56h32v5.12h-32v-5.12zM0 12.8h32v5.12h-32v-5.12zM0 23.040h32v5.12h-32v-5.12z"></path>
+        </symbol>
+        <symbol id="icon-plus" viewBox="0 0 32 32">
+        <title>plus</title>
+        <path d="M28 14h-10v-10h-4v10h-10v4h10v10h4v-10h10z"></path>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 32 32">
+        <title>search</title>
+        <path d="M21.035 22.505c-2.042 1.455-4.541 2.311-7.239 2.311-6.897 0-12.489-5.591-12.489-12.489s5.591-12.489 12.489-12.489c6.897 0 12.489 5.591 12.489 12.489 0 3.449-1.398 6.571-3.658 8.831l8.812 8.812c0.404 0.404 0.394 1.052-0.011 1.458-0.409 0.409-1.058 0.411-1.458 0.011l-8.934-8.934zM13.796 23.346c6.086 0 11.020-4.934 11.020-11.020s-4.934-11.020-11.020-11.020c-6.086 0-11.020 4.934-11.020 11.020s4.934 11.020 11.020 11.020v0z"></path>
+        </symbol>
+        <symbol id="icon-dropdown" viewBox="0 0 32 32">
+        <title>dropdown</title>
+        <path d="M24.788 10l1.212 1.294-10 10.706-10-10.706 1.206-1.294 8.794 9.406z"></path>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 32 32">
+        <title>check</title>
+        <path d="M16 32c-8.82 0-16-7.18-16-16s7.179-16 16-16c8.82 0 16 7.179 16 16s-7.18 16-16 16v0zM16 1.709c-7.863 0-14.291 6.427-14.291 14.291s6.427 14.291 14.291 14.291 14.291-6.427 14.291-14.291-6.427-14.291-14.291-14.291v0z"></path>
+        <path d="M14.085 22.906l-8.137-8.205 1.231-1.231 6.906 6.974 10.735-10.735 1.231 1.231-11.966 11.966z"></path>
+        </symbol>
+        <symbol id="icon-twoArrows" viewBox="0 0 32 32">
+        <title>twoArrows</title>
+        <path d="M30.713 16.391c-0.2 0-0.4-0.076-0.553-0.229l-14.199-14.199-14.199 14.199c-0.305 0.305-0.8 0.305-1.105 0-0.153-0.153-0.229-0.353-0.229-0.553s0.076-0.4 0.229-0.553l14.751-14.751c0.305-0.305 0.8-0.305 1.105 0l14.751 14.751c0.305 0.305 0.305 0.8 0 1.105-0.153 0.153-0.353 0.229-0.553 0.229z"></path>
+        <path d="M30.713 31.924c-0.2 0-0.4-0.076-0.553-0.229l-14.199-14.199-14.199 14.199c-0.305 0.305-0.8 0.305-1.105 0-0.153-0.153-0.229-0.353-0.229-0.553s0.076-0.4 0.229-0.553l14.751-14.751c0.305-0.305 0.8-0.305 1.105 0l14.751 14.751c0.305 0.305 0.305 0.8 0 1.105-0.153 0.153-0.353 0.229-0.553 0.229z"></path>
+        </symbol>
+        </defs>
+    </svg>
 </head>
-    <body>        
-        
+    <body>
+        <div class="u-hide">
+            <svg class="icon icon-menu">
+                <use xlink:href="#icon-menu"></use>
+            </svg>
+
+            <svg class="icon icon-plus">
+                <use xlink:href="#icon-plus"></use>
+            </svg>
+
+            <svg class="icon icon-search">
+                <use xlink:href="#icon-search"></use>
+            </svg>
+
+            <svg class="icon icon-dropdown">
+                <use xlink:href="#icon-dropdown"></use>
+            </svg>
+
+            <svg class="icon icon-check">
+                <use xlink:href="#icon-check"></use>
+            </svg>
+        </div>
+        <header class="header">
+            <ul class="header-action">
+                <li>
+                    <button class="header-action-btnMenu">
+                        <svg class="icon icon-menu">
+                            <use xlink:href="#icon-menu"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <a href="#" class="header-action-link header-action-link--black">
+                        My Tasks
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="header-action-link">
+                        Inbox
+                    </a>
+                </li>
+                <li>
+                    <button class="header-action-btnPlus">
+                        <svg class="icon icon-plus">
+                            <use xlink:href="#icon-plus"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="header-action-search">
+                    <input type="search" name="header-search" placeholder="Search" class="header-action-search-input">
+                    <svg class="icon icon-search">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                </li>
+                <li>
+                    <a href="#" class="header-action-link">
+                        Help
+                        <svg class="icon icon-dropdown">
+                            <use xlink:href="#icon-dropdown"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="header-action-link header-action-link--user">
+                        Personal Project
+                        <img src="assets/img/user-marco-luque.jpg" class="header-action-link-imgUser" alt="Usuário - Marco Luque">
+                    </a>
+                </li>
+            </ul>
+            <h1 class="header-title">
+                <img src="assets/img/user-marco-luque.jpg" class="header-title-imgUser" alt="Usuário - Marco Luque">
+                My Personal Tasks
+                <svg class="icon icon-dropdown">
+                    <use xlink:href="#icon-dropdown"></use>
+                </svg>
+            </h1>
+
+            <a href="#header" class="header-btnCollapse">
+                <svg class="icon icon-twoArrows">
+                    <use xlink:href="#icon-twoArrows"></use>
+                </svg>
+            </a>
+
+        </header>
     </body>
 </html>
