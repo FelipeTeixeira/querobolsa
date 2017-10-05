@@ -1,0 +1,56 @@
+// TESTE
+.card {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.card {
+    background-color: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.09);
+
+    .card-header {
+        padding: 12px 0 12px 30px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e6e6e6;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.09);
+
+        .card-header-actionTools {
+            margin-left: auto;
+            padding: 6px 12px;
+
+            .icon {
+                fill: #848f99;
+                width: 16px;
+                height: 16px;
+            }
+
+            &:hover {
+                .icon {
+                    fill: $color-orange;
+                }
+            }
+        }
+    }
+}
+
+.list {
+    padding: 0 30px;
+
+    li {
+        font-size: 14px;
+        border-bottom: 1px solid #e0e6e8;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+
+        .icon-check {
+            fill: #b8c0c6;
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+    }
+}

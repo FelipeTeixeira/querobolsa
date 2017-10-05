@@ -1,3 +1,6 @@
+// DEIXAR CORRETO O BACKGROUND DO BOTAO DE "PLUS"
+
+
 @import "helpers/_queries";
 @import "helpers/_variables";
 @import "base/_mixins";
@@ -9,14 +12,21 @@
 @import "layout/_header";
 
 // MODULES
-// @import "module/_product";
+@import "module/_btn";
+@import "module/_card";
 
 // STATES
 @import "state/_state";
 
-$color-orange: #de9e1f;
+
 
 .u-hide {
     display: none;
 }
+
+// esconder extensao do grid Chrome
+.ngrid-settings-button {
+    display: none;
+}
+
 

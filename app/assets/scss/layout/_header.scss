@@ -1,6 +1,6 @@
 .header {
     background-color: #FFF;
-
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.09);
 
     .header-action {
         display: flex;
@@ -30,7 +30,8 @@
             transition: color .2s ease;
 
             .icon {
-                vertical-align: bottom;
+                width: 8px;
+                height: 8px;
             }
 
             &.header-action-link--black {
@@ -83,7 +84,6 @@
                 bottom: 0;
                 margin: auto;
                 left: 10px;
-                transition: fill .2 ease;
             }
 
             .header-action-search-input {
@@ -127,8 +127,9 @@
 
         .icon {
             fill: #8c969f;
-            width: 18px;
-            height: 18px;
+            width: 10px;
+            height: 10px;
+            vertical-align: middle;
         }
     }
 
