@@ -37,14 +37,36 @@
 }
 
 .list {
-    padding: 0 30px;
+    padding-bottom: 12px;
 
     li {
         font-size: 14px;
-        border-bottom: 1px solid #e0e6e8;
-        padding: 10px 0;
+        padding: 10px 30px;
         display: flex;
         align-items: center;
+        position: relative;
+        cursor: pointer;
+        transition: background-color .2s ease;
+
+        // Nao fiz com borda, por causa do hover, a borda nao é 100%, menos div mais semantica
+        &:after {
+            content: "";
+            height: 1px;
+            background-color: #e0e6e8;
+            display: block;
+            width: calc(100% - 60px);
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: background-color .2s ease;
+        }
+
+        &:hover,
+        &:hover:after {
+            background-color: #edf8ff;
+        }
 
         .icon-check {
             fill: #b8c0c6;
