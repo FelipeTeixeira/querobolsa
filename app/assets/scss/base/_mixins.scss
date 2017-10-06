@@ -21,3 +21,8 @@
     margin: 0;
 }
 
+@mixin imgCircle($widthHeight) {
+    border-radius: 50%;
+    width: $widthHeight;
+    height: $widthHeight;
+}

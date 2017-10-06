@@ -1,4 +1,10 @@
 <!--
+    deixar o CARD com 100% de altura
+
+    olhar se a font é weight 500 ou normal
+
+    separar mixins um pra cada arquivo
+
     clicar no icone do HEADER, recolher menu
 
     USAR ALGUM COMPILADOR DE HTML
@@ -12,7 +18,6 @@
     SIPA REMOVER FONT 700
 
     passar tiny IMAGENS
-
 
     rever todos icones SVG
 -->
@@ -150,14 +155,14 @@
 
         </header>
 
-        <main>
+        <main class="is-cardAdd-show">
             <section class="card">
                 <header class="card-header">
                     <button class="btn btn-blue">
                         Add Task
                     </button>
 
-                    <a href="#" class="card-header-actionTools">
+                    <a href="#" class="card-header-action">
                         <svg class="icon icon-tools">
                             <use xlink:href="#icon-tools"></use>
                         </svg>
@@ -190,6 +195,31 @@
                     </li>
                 </ul>
             </section>
+
+            <aside class="card">
+                <header class="card-header">
+
+                    <a class="card-header-user">
+                        <img src="assets/img/user-marco-luque.jpg" alt="Usuário - Marco Luque" class="card-header-imgUser">
+                        Marco Luque
+                    </a>
+
+                    <a href="#" class="card-header-action">
+                        <svg class="icon icon-tools">
+                            <use xlink:href="#icon-tools"></use>
+                        </svg>
+                    </a>
+                </header>
+
+                <div class="card-body">
+
+                </div>
+
+                <footer class="card-footer">
+                    <img src="assets/img/user-marco-luque.jpg" alt="Usuário - Marco Luque" class="card-footer-imgUser">
+                    <textarea name="" cols="30" rows="4" placeholder="Write a comment..." class="card-footer-textareaComments"></textarea>
+                </footer>
+            </aside>
         </main>
 
     </body>

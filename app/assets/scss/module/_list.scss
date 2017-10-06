@@ -1,0 +1,41 @@
+.list {
+    padding-bottom: 12px;
+
+    li {
+        font-size: 14px;
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: background-color .2s ease;
+        cursor: pointer;
+
+        // Nao fiz com borda, por causa do hover, a borda nao é 100%,
+        // e tbm nao quis utilizar uma TAG a mais só por isso
+        &:after {
+            content: "";
+            height: 1px;
+            background-color: #e0e6e8;
+            display: block;
+            width: calc(100% - 60px);
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: background-color .2s ease;
+        }
+
+        &:hover,
+        &:hover:after {
+            background-color: #edf8ff;
+        }
+
+        .icon-check {
+            fill: #b8c0c6;
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+    }
+}

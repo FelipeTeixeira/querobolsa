@@ -47,7 +47,7 @@
             }
 
             .header-action-link-imgUser {
-                border-radius: 50%;
+                @include imgCircle(30px);
                 position: absolute;
                 right: 12px;
                 top: 0;
@@ -89,22 +89,17 @@
             .header-action-search-input {
                 font-size: 12px;
                 font-weight: 500;
-                border: 1px #d5dce0 solid;
                 border-radius: 20px;
                 padding: 6px 12px 6px 30px;
                 width: 100%;
-                transition: border-color .2s ease;
 
                 &::-webkit-input-placeholder {
                     color: #9ca6af;
                 }
 
                 &:focus {
-                    border-color: $color-orange;
-
-
                     + .icon {
-                        fill: $color-orange;
+                        fill: $color-blue;
                     }
                 }
             }
@@ -118,9 +113,7 @@
         padding: 4px 4px 0;
 
         .header-title-imgUser {
-            border-radius: 50%;
-            height: 24px;
-            width: 24px;
+            @include imgCircle(24px);
             position: relative;
             top: 4px;
         }

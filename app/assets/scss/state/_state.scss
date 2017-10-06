@@ -2,3 +2,14 @@
 .is-menu-active {
     display: block;
 }
+
+.is-cardAdd-show {
+    display: flex;
+    padding: 16px 8px 0;
+
+    .card {
+        width: 100%;
+        height: calc(100vh - 150px);
+        margin: 8px;
+    }
+}
