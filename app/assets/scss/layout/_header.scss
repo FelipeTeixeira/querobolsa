@@ -8,21 +8,24 @@
         border-bottom: 1px solid #edf1f2;
 
         .header-action-btnMenu {
-            width: 40px;
-            height: 40px;
+            @include widthHeight(40px);
             background-color: transparent;
             border-right: 1px solid #edf1f2;
 
             .icon {
                 fill: #848f99;
-                width: 14px;
-                height: 12px;
+                @include widthHeight(14px);
+            }
+
+            &:hover {
+                .icon {
+                    fill: $color-blue;
+                }
             }
         }
 
         .header-action-link {
-            font-size: 0.9em;
-            font-weight: 500;
+            font-size: 12px;
             color: #a0a9b1;
             padding: 12px 22px;
             position: relative;
@@ -30,8 +33,7 @@
             transition: color .2s ease;
 
             .icon {
-                width: 8px;
-                height: 8px;
+                @include widthHeight(8px);
             }
 
             &.header-action-link--black {
@@ -43,7 +45,7 @@
             }
 
             &:hover {
-                color: $color-orange;
+                color: $color-blue;
             }
 
             .header-action-link-imgUser {
@@ -58,14 +60,12 @@
 
         .header-action-btnPlus {
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
+            @include widthHeight(24px);
             background: linear-gradient(35deg, #ff4343, #ffff4b);
 
             .icon {
                 fill: #FFF;
-                width: 12px;
-                height: 12px;
+                @include widthHeight(12px);
             }
         }
 
@@ -77,8 +77,7 @@
 
             .icon {
                 fill: #9ca6af;
-                width: 14px;
-                height: 14px;
+                @include widthHeight(14px);
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -88,7 +87,6 @@
 
             .header-action-search-input {
                 font-size: 12px;
-                font-weight: 500;
                 border-radius: 20px;
                 padding: 6px 12px 6px 30px;
                 width: 100%;
@@ -104,6 +102,7 @@
 
     .header-title {
         font-size: 24px;
+        font-weight: normal;
         text-align: center;
         color: #151b26;
         padding: 4px 4px 0;
@@ -116,25 +115,23 @@
 
         .icon {
             fill: #8c969f;
-            width: 10px;
-            height: 10px;
+            @include widthHeight(10px);
             vertical-align: middle;
         }
     }
 
-    .header-btnCollapse {
+    .header-linkCollapse {
         padding: 6px 12px;
         display: inline-block;
 
         .icon {
             fill: #9ca6af;
-            height: 10px;
-            width: 10px;
+            @include widthHeight(10px);
         }
 
         &:hover {
             .icon {
-                fill: $color-orange;
+                fill: $color-blue;
             }
         }
     }

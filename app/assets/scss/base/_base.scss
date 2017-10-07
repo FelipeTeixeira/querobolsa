@@ -32,15 +32,6 @@ img {
     height: auto;
 }
 
-a {
-    text-decoration: none;
-
-    &:focus,
-    &:active {
-        outline: 0;
-    }
-}
-
 ul {
     list-style: none;
 }
@@ -69,9 +60,16 @@ textarea {
     resize: none;
 }
 
+a,
 button {
     font-family: $font;
     border: none;
     transition: color .2s ease, border-color .2s ease;
+    text-decoration: none;
     cursor: pointer;
+
+    &:focus,
+    &:active {
+        outline: 0;
+    }
 }

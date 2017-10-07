@@ -4,23 +4,11 @@
 }
 
 .is-cardAdd-show {
-    margin: auto;
-
-    @media (min-width: $screen-desktop-min) {
-        display: flex;
-        padding: 16px 8px 0;
-    }
-    // TEST
-    max-width: 1400px;
-
-
     .card {
-        width: 100%;
-        height: calc(100vh - 150px);
         margin-bottom: 24px;
 
         @media (min-width: $screen-desktop-min) {
-            margin: 8px;
+            margin: 8px 8px 0;
         }
     }
 }

@@ -1,6 +1,9 @@
+// HELPERS
 @import "helpers/_queries";
 @import "helpers/_variables";
-@import "base/_mixins";
+
+// MIXINS
+@import "mixins/_mixins";
 
 @import "base/_base";
 
@@ -22,7 +25,7 @@
 }
 
 // esconder extensao do grid Chrome
-// .ngrid-settings-button {
-//     display: none;
-// }
+.ngrid-settings-button {
+    display: none;
+}
 

@@ -8,11 +8,7 @@
 
     // DEIXAR CORRETO O BACKGROUND DO BOTAO DE "PLUS"
 
-    deixar o CARD com 100% de altura
-
-    olhar se a font é weight 500 ou normal
-
-    separar mixins um pra cada arquivo
+    olhar &::-webkit-input-placeholder
 
     clicar no icone do HEADER, recolher menu, talvez inserir a tag Section
 
@@ -22,25 +18,13 @@
     REMOVE PASTA ASSETS
     deixar o CSS apenas na pasta DIST
 
-    PROCURAR SVG, inserir atributo TITLE NELE?
-
-    SIPA REMOVER FONT 700
-
-    passar tiny IMAGENS
-
-    rever todos icones SVG
-
-
-    icone de setinha em cima da bolinha quando passa o mouse o card fica azul
-
     widtth e height mixin quando igual
-
-    colocar no REDMNE
-    nao encontrei os icones como na imagem, peguei mais parecido
 
     deixar na versão mobile abrindo em  cima do outro card a Task
 
     fazer CSS perfomatico igual do Offy, sem tanta heranca
+
+    icone de setinha em cima da bolinha quando passa o mouse o card fica azul
 -->
 <!DOCTYPE html>
 <html>
@@ -130,7 +114,7 @@
                 </symbol>
                 <symbol id="icon-dropdown" viewBox="0 0 32 32">
                 <title>dropdown</title>
-                <path d="M13.736 25.043l-12.582-12.582c-1.154-1.154-1.154-3.042 0-4.194l1.050-1.051c1.151-1.153 3.040-1.153 4.193 0l9.602 9.603 9.604-9.602c1.153-1.153 3.042-1.153 4.193 0l1.050 1.051c1.154 1.153 1.154 3.040 0 4.194l-12.585 12.582c-0.618 0.62-1.449 0.895-2.262 0.849-0.813 0.046-1.642-0.23-2.263-0.849z"></path>
+                <path d="M30.060 6.4l1.94 2.070-16 17.13-16-17.13 1.93-2.070 14.070 15.050z"></path>
                 </symbol>
                 <symbol id="icon-twoArrows" viewBox="0 0 32 32">
                 <title>twoArrows</title>
@@ -257,7 +241,7 @@
                 </svg>
             </h1>
 
-            <a href="#header" class="header-btnCollapse">
+            <a href="#header" class="header-linkCollapse">
                 <svg class="icon icon-twoArrows">
                     <use xlink:href="#icon-twoArrows"></use>
                 </svg>
@@ -265,7 +249,7 @@
 
         </header>
 
-        <main class="is-cardAdd-show">
+        <main class="cardContainer is-cardAdd-show">
 
             <section class="card">
                 <header class="card-header">

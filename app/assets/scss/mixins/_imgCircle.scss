@@ -1,0 +1,4 @@
+@mixin imgCircle($widthHeight) {
+    border-radius: 50%;
+    @include widthHeight($widthHeight);
+}
