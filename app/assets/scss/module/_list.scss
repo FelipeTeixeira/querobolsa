@@ -49,8 +49,7 @@
 
         .icon-check {
             fill: #b8c0c6;
-            width: 24px;
-            height: 24px;
+            @include widthHeight(24px);
             margin-right: 12px;
         }
     }
