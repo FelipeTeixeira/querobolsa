@@ -30,4 +30,35 @@
 //     display: none;
 // }
 
+.fieldControl {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
 
+    .fieldControl-field {
+        border: 1px solid #FFF;
+        min-height: 42px;
+    }
+
+    &.fieldControl--icon {
+        .fieldControl-field {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 0 12px 0 52px;
+        }
+
+        .icon {
+            fill: #b7bfc6;
+            @include widthHeight(30px);
+            position: absolute;
+            left: 10px;
+        }
+    }
+
+    .fieldControl-field--description {
+        margin-left: 40px;
+        padding: 10px;
+        width: 100%;
+    }
+}

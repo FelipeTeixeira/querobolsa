@@ -12,7 +12,7 @@
 
         // Nao fiz com borda, por causa do hover, a borda nao é 100%,
         // e tbm nao quis utilizar uma TAG a mais só por isso
-        &:after {
+        &:before {
             content: "";
             height: 1px;
             background-color: #e0e6e8;
@@ -26,9 +26,25 @@
             transition: background-color .2s ease;
         }
 
-        &:hover,
-        &:hover:after {
+        &:after {
+            content: "";
+            @include circle(14px);
+            display: block;
+            margin-left: auto;
+            opacity: 0;
+        }
+
+        &:hover {
             background-color: #edf8ff;
+
+            &:after {
+                opacity: 10;
+            }
+
+            // BORDA MESMA COR
+            &:before {
+                background-color: #edf8ff;
+            }
         }
 
         .icon-check {

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-// EXAMPLES
+
 @mixin transform($transforms) {
     -moz-transform: $transforms;
     -o-transform: $transforms;
@@ -23,6 +23,20 @@
 
 @mixin imgCircle($widthHeight) {
     border-radius: 50%;
+    width: $widthHeight;
+    height: $widthHeight;
+}
+
+@mixin circle($widthHeight) {
+    content: "";
+    width: $widthHeight;
+    height: $widthHeight;
+    border-radius: 50%;
+    border: 2px solid #d5dce0;
+    transition: opacity .2s ease, border-color .2s ease;
+}
+
+@mixin widthHeight($widthHeight) {
     width: $widthHeight;
     height: $widthHeight;
 }

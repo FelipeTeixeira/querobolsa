@@ -13,18 +13,50 @@
     display: flex;
     flex-direction: column;
 
+    // HEADER
     .card-header {
-        padding: 12px 0 12px 30px;
-        height: 60px;
+        padding-left: 30px;
+        height: 52px;
         display: flex;
         align-items: center;
         border-bottom: 1px solid #e6e6e6;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.09);
 
-        .card-header-user {
+        .card-header-link {
             font-size: 14px;
             display: flex;
             align-items: center;
+
+            &.card-header-link--user {
+                &:after {
+                    @include circle(14px);
+                    display: inline-block;
+                    margin-left: 6px;
+                    margin-right: 30px;
+                }
+            }
+
+            &.card-header-link--date {
+                color: #87929b;
+                margin-right: 16px;
+
+                .btnCircle {
+                    margin-right: 8px;
+                }
+            }
+
+            &:hover {
+                color: $color-blue;
+
+                .btnCircle,
+                &:after {
+                    border-color: $color-blue;
+                }
+
+                .icon {
+                    fill: $color-blue;
+                }
+            }
         }
 
         .card-header-imgUser {
@@ -34,7 +66,7 @@
 
         .card-header-action {
             margin-left: auto;
-            padding: 6px 12px;
+            padding: 10px 12px;
 
             .icon {
                 fill: #848f99;
@@ -42,18 +74,35 @@
                 height: 16px;
             }
 
+            &.card-header-action--close {
+                align-self: flex-start;
+
+                .icon {
+                    width: 12px;
+                    height: 12px;
+                    fill: #b7bfc6;
+                }
+            }
+
             &:hover {
                 .icon {
-                    fill: $color-orange;
+                    fill: $color-blue;
                 }
             }
         }
+
+        .btnCircle {
+            margin: 0 3px;
+        }
     }
 
+    // BODY
     .card-body {
         flex: 1;
+        padding:  54px 30px 20px 20px;
     }
 
+    // FOOTER
     .card-footer {
         background-color: #f6f8f9;
         border-top: 1px solid #e0e6e8;
@@ -66,16 +115,7 @@
         }
 
         .card-footer-textareaComments {
-            border: 1px solid #d5dce0;
-            resize: none;
-            width: 100%;
-            padding: 14px 10px;
-            border-radius: 4px;
-
-            &::-webkit-input-placeholder {
-                color: #b8c0c7;
-            }
+            padding-top: 14px;
         }
     }
 }
-

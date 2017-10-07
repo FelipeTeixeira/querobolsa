@@ -15,7 +15,7 @@ body {
 body {
     font-family: $font;
     min-width: 320px;
-    background: url("../img/bg.jpg") no-repeat;
+    background: url("../img/bg.jpg");
     background-size: cover;
     font-size: 14px;
     color: #151b26;
@@ -52,7 +52,10 @@ input,
 textarea {
     font-family: $font;
     transition: box-shadow .2s ease;
-    border: 1px solid #d5dce0 !important;
+    border-radius: 4px;
+    border: 1px solid #d5dce0;
+    padding: 10px;
+    width: 100%;
 
     &:focus,
     &:active {
@@ -62,9 +65,19 @@ textarea {
     &:focus {
         box-shadow: 0px 0px 1px 0px $color-blue;
     }
+
+    &::-webkit-input-placeholder {
+        color: #9ca6af;
+    }
+}
+
+textarea {
+    resize: none;
 }
 
 button {
     font-family: $font;
     border: none;
+    transition: color .2s ease, border-color .2s ease;
+    cursor: pointer;
 }

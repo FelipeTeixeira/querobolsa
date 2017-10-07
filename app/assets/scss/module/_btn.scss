@@ -1,12 +1,10 @@
 .btn {
     font-size: 14px;
     font-weight: 500;
-    padding: 8px;
+    padding: 6px 8px;
     border-radius: 4px;
     background-color: #FFF;
     border: 1px #d5dce0 solid;
-    transition: color .2s ease, border-color .2s ease;
-    cursor: pointer;
 
     &.btn-blue {
         color: $color-blue;
@@ -16,5 +14,34 @@
     &:hover {
         color: $color-orange;
         border-color: $color-orange;
+    }
+}
+
+.btnCircle {
+    background-color: #FFF;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #b8c0c6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        fill: #bdc4ca;
+        width: 14px;
+        height: 14px;
+    }
+
+    &.btnCircle--dashed {
+        border-style: dashed;
+    }
+
+    &:hover {
+        border-color: $color-blue;
+
+        .icon {
+            fill: $color-blue;
+        }
     }
 }

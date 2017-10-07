@@ -93,10 +93,6 @@
                 padding: 6px 12px 6px 30px;
                 width: 100%;
 
-                &::-webkit-input-placeholder {
-                    color: #9ca6af;
-                }
-
                 &:focus {
                     + .icon {
                         fill: $color-blue;
