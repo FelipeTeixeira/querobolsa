@@ -1,9 +1,4 @@
 <!--
-    criar componente de input,
-        - input com icone pequeno
-        - input BIG
-        - input redendo
-
     notificao de task cadastrada igual google keep
 
     <link rel=”preload”>
@@ -231,11 +226,11 @@
 
         </header>
 
-        <main class="cardContainer is-cardAdd-show">
+        <main class="cardContainer">
 
             <section class="card">
                 <header class="card-header">
-                    <button class="btn btn-blue">
+                    <button id="js-addTask" class="btn btn-blue">
                         Add Task
                     </button>
 
@@ -273,7 +268,7 @@
                 </ul>
             </section>
 
-            <aside class="card">
+            <aside id="cardAdd" class="card cardAdd">
 
                 <header class="card-header">
 
@@ -343,6 +338,11 @@
                 </footer>
             </aside>
         </main>
-
+        <script>
+            var cardAdd = document.querySelector(".cardContainer");
+            document.querySelector("#js-addTask").onclick = function() {
+                cardAdd.classList.toggle("is-cardAdd-show");
+            }
+        </script>
     </body>
 </html>
