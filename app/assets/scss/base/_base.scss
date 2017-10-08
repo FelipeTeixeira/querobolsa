@@ -64,7 +64,7 @@ a,
 button {
     font-family: $font;
     border: none;
-    transition: color .2s ease, border-color .2s ease;
+    transition: color .2s ease, border-color .2s ease, background-color .2s ease;
     text-decoration: none;
     cursor: pointer;
 

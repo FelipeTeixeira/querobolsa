@@ -58,14 +58,22 @@
             }
         }
 
+        // NAO UTILIZEI O COMPONENTE BTN, POIS ELE PRATICAMENTE MODIFICA TODAS OS STYLES
         .header-action-btnPlus {
             border-radius: 50%;
             @include widthHeight(24px);
-            background: linear-gradient(35deg, #ff4343, #ffff4b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, rgba(255,97,113,1) 0%, rgba(255,107,122,1) 23%, rgba(254,123,111,1) 41%, rgba(254,137,91,1) 58%, rgba(253,154,62,1) 81%, rgba(253,157,54,1) 91%, rgba(253,165,41,1) 100%);
 
             .icon {
                 fill: #FFF;
                 @include widthHeight(12px);
+            }
+
+            &:hover {
+                background: $color-blue;
             }
         }
 
