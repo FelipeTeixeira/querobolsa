@@ -7,6 +7,7 @@ class TaskController {
         this._fieldTaskTitle = $('#taskTitle');
         this._fieldDescription = $('#description');
         this._btnSubmit = $("#btnSend");
+        this.cardAdd = $(".cardContainer");
 
         this._listTask = new ListTask();
 
@@ -24,8 +25,8 @@ class TaskController {
         this._listTask.addTask(this._createTask());
         this._listView.update(this._listTask);
 
-        this._message.messageText = 'Create Task';
 
+        this._message.messageText = 'Create Task';
         this._messageView.update(this._message);
 
         this._clearForm();
@@ -33,6 +34,12 @@ class TaskController {
 
     triggerTask() {
         this._btnSubmit.click();
+    }
+
+    closeTask(event) {
+        event.preventDefault();
+        if (this._fieldTaskTitle.value == "" && this._fieldDescription.value == "")
+            this.cardAdd.classList.remove("is-cardAdd-show");
     }
 
     _createTask() {
@@ -46,7 +53,5 @@ class TaskController {
 
         this._fieldTaskTitle.value = "";
         this._fieldDescription.value = "";
-
-        // this._fieldTaskTitle.focus();
     }
 }
