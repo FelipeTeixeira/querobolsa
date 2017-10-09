@@ -70,7 +70,9 @@ button {
     cursor: pointer;
 
     &:focus,
-    &:active {
+    &:active,
+    &:visited {
         outline: 0;
+        color: #151b26;
     }
 }
