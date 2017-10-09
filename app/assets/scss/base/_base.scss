@@ -69,10 +69,15 @@ button {
     text-decoration: none;
     cursor: pointer;
 
+    &:focus {
+        outline: 0;
+    }
+}
+
+a {
     &:focus,
     &:active,
     &:visited {
-        outline: 0;
         color: #151b26;
     }
 }

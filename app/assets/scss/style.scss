@@ -1,6 +1,7 @@
 // HELPERS
 @import "helpers/_queries";
 @import "helpers/_variables";
+@import "helpers/_utilities";
 
 // MIXINS
 @import "mixins/_mixins";
@@ -16,16 +17,7 @@
 @import "module/_card";
 @import "module/_list";
 @import "module/_fieldControl";
+@import "module/_notification";
 
 // STATES
 @import "state/_state";
-
-.u-hide {
-    display: none;
-}
-
-// esconder extensao do grid Chrome
-.ngrid-settings-button {
-    display: none;
-}
-

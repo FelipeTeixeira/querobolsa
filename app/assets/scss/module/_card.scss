@@ -34,6 +34,8 @@
             align-items: center;
 
             &.card-header-link--user {
+                color: #151b26;
+
                 &:after {
                     @include circle(14px);
                     display: inline-block;
