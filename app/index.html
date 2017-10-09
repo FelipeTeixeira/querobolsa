@@ -1,6 +1,4 @@
 <!--
-    notificao de task cadastrada igual google keep
-
     <link rel=”preload”>
 
     https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_check
@@ -15,7 +13,6 @@
     <title>
         Quero Bolsa
     </title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -346,6 +343,10 @@
 
             document.querySelector("#js-addTask").onclick = function() {
                 cardAdd.classList.add("is-cardAdd-show");
+            }
+
+            if('serviceWorker' in navigator ){
+                // navigator.serviceWorker.register('sw.js')
             }
 
         </script>
