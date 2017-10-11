@@ -1,8 +1,3 @@
-// ----------------------------------------
-// ----------------------------------------
-// SIPA NEM PRECISA DO GULP sequence
-// ----------------------------------------
-// ----------------------------------------
 var gulp            = require("gulp");
 var browserSync     = require("browser-sync").create();
 var sass            = require("gulp-sass");
