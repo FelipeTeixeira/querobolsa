@@ -1,11 +1,11 @@
 .cardContainer {
     margin: auto;
-    display: flex;
-    align-content: stretch;
-    justify-content: center;
 
     @media (min-width: $screen-desktop-min) {
         padding: 16px 8px 0;
+        display: flex;
+        align-content: stretch;
+        justify-content: center;
     }
 }
 
@@ -21,12 +21,18 @@
 
     // HEADER
     .card-header {
+        padding: 12px 12px 12px 30px;
         padding-left: 30px;
-        height: 52px;
-        display: flex;
-        align-items: center;
+        min-height: 52px;
+
         border-bottom: 1px solid #e6e6e6;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.09);
+
+        @media (min-width: $screen-desktop-min) {
+            display: flex;
+            align-items: center;
+            padding: 0 0 0 30px;
+        }
 
         .card-header-link {
             font-size: 14px;

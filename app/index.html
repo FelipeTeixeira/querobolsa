@@ -1,8 +1,6 @@
 <!--
     <link rel=”preload”>
 
-    https://www.w3schools.com/js/tryit.asp?filename=tryjs_validation_check
-
     quando clicar no list task e estiver FECHADO, abre e manda o campos
 -->
 <!DOCTYPE html>
@@ -295,25 +293,26 @@
 
                 </header>
 
-                <form class="card-body" onsubmit="taskController.verificarIs(event)">
-                    <input type="text" id="taskId">
+                <section class="card-body">
+                    <input type="hidden" id="taskId">
+
                     <div class="fieldControl fieldControl--icon">
                         <svg class="icon icon-check">
                             <use xlink:href="#icon-check"></use>
                         </svg>
-                        <input type="text" id="taskTitle" class="fieldControl-field" placeholder="New Task" onblur="taskController.triggerTask()">
+                        <input  type="text" id="taskTitle" class="fieldControl-field"
+                                placeholder="New Task" onblur=""
+                                onkeypress="taskController.keyCodeEnter(event)"
+                                onClick="this.select();" required>
                     </div>
 
                     <div class="fieldControl">
                         <textarea id="description" cols="30" rows="3" placeholder="Description"
                                   class="fieldControl-field fieldControl-field--description"
-                                  onblur="taskController.triggerTask()"></textarea>
+                                  onClick="this.select();"
+                                  onblur="taskController.verifyIs()" onkeypress="taskController.keyCodeEnter(event)"></textarea>
                     </div>
-
-                    <button id="btnSend" type="submit" class="u-hide">
-                        Enviar
-                    </button>
-                </form>
+                </section>
 
                 <footer class="card-footer">
                     <img src="assets/img/user-marco-luque.jpg" alt="Usuário - Marco Luque" class="card-footer-imgUser">
@@ -341,10 +340,6 @@
         <!-- JOGAR NO INDEX -->
         <script>
             let taskController = new TaskController();
-
-
-
-
 
             if('serviceWorker' in navigator ){
                 // navigator.serviceWorker.register('sw.js')

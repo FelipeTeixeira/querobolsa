@@ -9,7 +9,7 @@ class ListView extends View {
         return `
             ${model.tasks.map(item => `
 
-                <li onclick="taskController.editOpen(${item.id})">
+                <li onclick="taskController.openNewTask(), taskController.editOpen(${item.id})">
                     <svg class="icon icon-check">
                         <use xlink:href="#icon-check"></use>
                     </svg>

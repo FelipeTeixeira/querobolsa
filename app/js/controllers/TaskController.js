@@ -7,7 +7,6 @@ class TaskController {
         this._fieldTaskId = $('#taskId');
         this._fieldTaskTitle = $('#taskTitle');
         this._fieldDescription = $('#description');
-        this._btnSubmit = $("#btnSend");
         this._cardAdd = $(".cardContainer");
 
         this._listTask = new ListTask();
@@ -21,14 +20,13 @@ class TaskController {
 
     }
 
-    verificarIs(event) {
-        event.preventDefault();
-
+    verifyIs(event) {
         if (this._fieldTaskId.value == "") {
             this._addTask();
         } else {
             this._editTask();
         }
+        this._fieldTaskTitle.focus();
     }
 
     _editTask() {
@@ -47,22 +45,19 @@ class TaskController {
     }
 
     _addTask(event) {
-        this._listTask.addTask(this._createTask());
-        this._listView.update(this._listTask);
+        if(this._fieldTaskTitle.checkValidity()) {
+            this._listTask.addTask(this._createTask());
+            this._listView.update(this._listTask);
 
-        this._message.messageText = 'Create Task';
-        this._messageView.update(this._message);
-
-        this._clearForm();
-
-    }
-
-    triggerTask() {
-        this._btnSubmit.click();
+            this._message.messageText = 'Create Task';
+            this._messageView.update(this._message);
+            this._clearForm();
+        }
     }
 
     closeTask(event) {
         event.preventDefault();
+        this.verifyIs();
         this._cardAdd.classList.remove("is-cardAdd-show");
         this._clearForm();
     }
@@ -89,9 +84,15 @@ class TaskController {
         this._clearForm();
     }
 
+    keyCodeEnter(event) {
+        if(event.keyCode === 13){
+            this.verifyIs();
+        }
+    }
+
     _clearForm() {
-        this._fieldTaskId.value = "";
-        this._fieldTaskTitle.value = "";
-        this._fieldDescription.value = "";
+        this._fieldTaskId.value = null;
+        this._fieldTaskTitle.value = null;
+        this._fieldDescription.value = null;
     }
 }
