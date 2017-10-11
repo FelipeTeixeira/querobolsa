@@ -33,10 +33,10 @@ class TaskController {
 
     _editTask() {
 
-        this._listTask._tasks.forEach(function(element) {
-            if(element.id == this._fieldTaskId.value) {
-                element.taskTitle = this._fieldTaskTitle.value;
-                element.description = this._fieldDescription.value;
+        this._listTask._tasks.forEach(function(item) {
+            if(item.id == this._fieldTaskId.value) {
+                item.taskTitle = this._fieldTaskTitle.value;
+                item.description = this._fieldDescription.value;
             }
         }, this);
 
