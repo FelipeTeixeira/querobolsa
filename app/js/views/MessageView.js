@@ -1,6 +1,7 @@
 class MessageView extends View {
 
     constructor(element) {
+
        super(element);
     }
 

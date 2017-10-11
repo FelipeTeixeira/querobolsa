@@ -1,6 +1,7 @@
 class TaskController {
 
     constructor() {
+
         let $ = document.querySelector.bind(document);
 
         this._id = 0;
@@ -21,6 +22,7 @@ class TaskController {
     }
 
     verifyIs(event) {
+
         if (this._fieldTaskId.value == "") {
             this._addTask();
         } else {
@@ -30,6 +32,7 @@ class TaskController {
     }
 
     _editTask() {
+
         this._listTask._tasks.forEach(function(element) {
             if(element.id == this._fieldTaskId.value) {
                 element.taskTitle = this._fieldTaskTitle.value;
@@ -45,6 +48,7 @@ class TaskController {
     }
 
     _addTask(event) {
+
         if(this._fieldTaskTitle.checkValidity()) {
             this._listTask.addTask(this._createTask());
             this._listView.update(this._listTask);
@@ -56,6 +60,7 @@ class TaskController {
     }
 
     closeTask(event) {
+
         event.preventDefault();
         this.verifyIs();
         this._cardAdd.classList.remove("is-cardAdd-show");
@@ -80,17 +85,20 @@ class TaskController {
     }
 
     openNewTask() {
+
         this._cardAdd.classList.add("is-cardAdd-show");
         this._clearForm();
     }
 
     keyCodeEnter(event) {
+
         if(event.keyCode === 13){
             this.verifyIs();
         }
     }
 
     _clearForm() {
+
         this._fieldTaskId.value = null;
         this._fieldTaskTitle.value = null;
         this._fieldDescription.value = null;

@@ -13,7 +13,7 @@ class ListView extends View {
                     <svg class="icon icon-check">
                         <use xlink:href="#icon-check"></use>
                     </svg>
-                    ${item.taskTitle} -- ${item.id} * ${item.description} *
+                    ${item.taskTitle}
                 </li>
 
             `).join('')}
