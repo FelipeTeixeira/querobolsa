@@ -140,6 +140,7 @@
         // ADD MIN-HEIGHT so pra quando fazer a transicao nao exibir ele pequeno
         // por causa que esta com "position: fixed"
         min-height: 100%;
+        max-width: 624px;
         transition: transform .2s ease, opacity .2s ease, visibility .2s ease;
     }
 }

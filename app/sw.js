@@ -1,6 +1,6 @@
-let versao = 7
+let version = 7
 
-let arquivos = [
+let files = [
 "/",
 "assets/css/style.css",
 "assets/img/bg.jpg",
@@ -17,30 +17,28 @@ let arquivos = [
 ]
 
 self.addEventListener("install", function(){
-    console.log("Instalou")
+    console.log("Install SW")
 })
 
 self.addEventListener("activate", function(){
-    caches.open("ceep-arquivos-" + versao).then(cache => {
-        cache.addAll(arquivos)
+    caches.open("quero-files-" + version).then(cache => {
+        cache.addAll(files)
             .then(function(){
-                caches.delete("ceep-arquivos-" + (versao - 1 ))
-                caches.delete("ceep-arquivos")
+                caches.delete("quero-files-" + (version - 1 ))
+                caches.delete("quero-files")
             })
-
     })
 })
 
-
 self.addEventListener("fetch", function(event){
 
-    let pedido = event.request
-    let promiseResposta = caches.match(pedido).then(respostaCache => {
-        let resposta = respostaCache ? respostaCache : fetch(pedido)
-        return resposta
+    let order = event.request
+    let promiseResponse = caches.match(order).then(responseCache => {
+        let response = responseCache ? responseCache : fetch(order)
+        return response
     })
 
-    event.respondWith(promiseResposta)
+    event.respondWith(promiseResponse)
 
 })
 

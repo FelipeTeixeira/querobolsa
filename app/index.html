@@ -1,5 +1,4 @@
 <!--
-    <link rel=”preload”>
     - icone de setinha em cima da bolinha quando passa o mouse o card fica azul
 -->
 <!DOCTYPE html>
@@ -13,7 +12,6 @@
         Quero Bolsa
     </title>
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
     <body>
         <div class="u-hide">
@@ -335,13 +333,11 @@
         <script src="js/views/ListView.js"></script>
         <script src="js/views/MessageView.js"></script>
 
-
-        <!-- JOGAR NO INDEX -->
         <script>
             let taskController = new TaskController();
 
             if('serviceWorker' in navigator ){
-                // navigator.serviceWorker.register('sw.js')
+                navigator.serviceWorker.register('sw.js');
             }
 
         </script>

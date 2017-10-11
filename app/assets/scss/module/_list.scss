@@ -1,7 +1,7 @@
 .list {
     padding-bottom: 12px;
 
-    li {
+    .list-task {
         font-size: 14px;
         padding: 10px 30px;
         display: flex;
@@ -34,6 +34,7 @@
             opacity: 0;
         }
 
+        &.is-active,
         &:hover {
             background-color: #edf8ff;
 
@@ -47,10 +48,30 @@
             }
         }
 
+        &.is-active {
+            .icon-dropdown {
+                opacity: 10;
+            }
+        }
+
         .icon-check {
             fill: #b8c0c6;
             @include widthHeight(24px);
             margin-right: 12px;
+        }
+
+        .icon-dropdown {
+            will-change: opacity;
+            opacity: 0;
+            transition: opacity .2s ease;
+            @include widthHeight(8px);
+            fill: #b8c0c6;
+            position: absolute;
+            right: 16px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(-90deg);
         }
     }
 }
